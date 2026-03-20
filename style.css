@@ -33,10 +33,18 @@ body {
   font-size: 1.6rem;
 }
 
+/* Estrela decorativa após o título do cabeçalho */
+.cabecalho h1::after {
+  content: " ★";
+  font-size: 1rem;
+  color: #3498db;
+  vertical-align: middle;
+}
+
 /* Menu Lateral */
 .menu-lateral {
   grid-area: menu;
-  background-color: #34495e;
+  background-color: #81878e;
   color: #ecf0f1;
   padding: 24px 16px;
 }
@@ -55,6 +63,12 @@ body {
   flex-direction: column;
   gap: 8px;
 }
+
+/* Ícones de texto decorativos via ::before nos itens do menu */
+.menu-inicio::before  { content: "🏠 "; }
+.menu-sobre::before   { content: "👤 "; }
+.menu-servicos::before { content: "⚙️ "; }
+.menu-contato::before { content: "✉️ "; }
 
 .menu-lateral ul li a {
   display: block;
@@ -84,6 +98,17 @@ body {
   font-size: 1.4rem;
   margin-bottom: 16px;
   color: #2c3e50;
+}
+
+/* Linha decorativa após o título do conteúdo */
+.conteudo h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background-color: #3498db;
+  margin-top: 8px;
+  border-radius: 2px;
 }
 
 .conteudo p {
